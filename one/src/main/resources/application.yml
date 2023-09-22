@@ -1,7 +1,17 @@
 server:
   port: 8080
+#spring:
+  #security:
+    #user:
+      #name: luo
+      #password: 1234
 spring:
-  security:
-    user:
-      name: luo
-      password: 1234
+  datasource:
+    username: root
+    password: abc123
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/cloud2020?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDataTimeBehavior=covertToNull&useSSL=false&allowPublicKeyRetrieval=true
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true  #驼峰映射
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
